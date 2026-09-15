@@ -45,7 +45,10 @@ and you're just playing.
 
 ## Context
 
-- **Sonic Pi** (https://sonic-pi.net/) is a live-coding environment with a Ruby-flavored DSL. Code lives in buffers; running a buffer plays it; `live_loop` provides forever-running, hot-swappable loops. It exposes an OSC interface, and `sonic-pi-tool` is the established CLI for driving a running instance — both are the integration seams this project builds on.
+- **Sonic Pi** (https://sonic-pi.net/) is a live-coding environment with a Ruby-flavored DSL. Code lives in buffers; running a buffer plays it; `live_loop` provides forever-running, hot-swappable loops.
+- **Integration seam (corrected by research):** `sonic-pi-tool` and its forks are NOT usable against current Sonic Pi (v5.x) — the `/run-code` channel is gated behind a dynamically-allocated port plus a random per-launch token with no stable discovery path. The verified working seam is the unauthenticated **OSC cue server on port 4560**, paired with a small resident runner buffer inside Sonic Pi that `sync`s on a cue and `eval`s the incoming code string. That runner buffer is a first-class artifact this project ships.
+- **Sonic Pi's DSL already provides** `scale`, `chord`, `ring`, `spread` (real Euclidean rhythms via Bjorklund), `live_loop`, `sync`/`cue`, and `use_random_seed`. These are emitted, never reimplemented in Ruby.
+- **The Ruby music-theory gem ecosystem is effectively dead** (the one real candidate has had no release since 2016). Scale/chord/rhythm primitives get hand-rolled — which also serves the determinism requirement better.
 - The generator layer is Ruby to keep generated code and generating code in the same language, minimizing the mental context-switch while iterating. The tradeoff — Ruby's algorithmic-music library ecosystem is thinner than Python's (music21, mingus, mido) — was accepted knowingly.
 - Generator ideas floated during questioning, as flavor rather than commitment: 16-bit Final Fantasy–inspired loops, noise walls, "weirdest version of a described vibe." The module name being the vibe is a legitimate design.
 - Novelty and surprise are welcome outcomes but are not the success bar. Iteration speed is.
