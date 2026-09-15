@@ -109,13 +109,54 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (pending roadmap creation) | — | — |
+| GEN-01 | Phase 1 | Pending |
+| GEN-02 | Phase 1 | Pending |
+| GEN-03 | Phase 1 | Pending |
+| GEN-04 | Phase 1 | Pending |
+| GEN-05 | Phase 1 | Pending |
+| GEN-06 | Phase 1 | Pending |
+| GEN-07 | Phase 1 | Pending |
+| GEN-08 | Phase 1 | Pending |
+| IR-01 | Phase 1 | Pending |
+| IR-02 | Phase 1 | Pending |
+| IR-03 | Phase 1 | Pending |
+| EMIT-01 | Phase 1 | Pending |
+| EMIT-02 | Phase 1 | Pending |
+| EMIT-03 | Phase 1 | Pending |
+| EMIT-04 | Phase 1 | Pending |
+| EMIT-05 | Phase 1 | Pending |
+| EMIT-06 | Phase 1 | Pending |
+| EMIT-07 | Phase 1 | Pending |
+| EMIT-08 | Phase 1 | Pending |
+| LOOP-01 | Phase 1 | Pending |
+| LOOP-02 | Phase 2 | Pending |
+| LOOP-03 | Phase 2 | Pending |
+| LOOP-04 | Phase 2 | Pending |
+| LOOP-05 | Phase 2 | Pending |
+| LOOP-06 | Phase 2 | Pending |
+| LOOP-07 | Phase 2 | Pending |
+| LIB-07 | Phase 2 | Pending |
+| LIB-01 | Phase 3 | Pending |
+| LIB-02 | Phase 3 | Pending |
+| LIB-03 | Phase 3 | Pending |
+| LIB-04 | Phase 4 | Pending |
+| LIB-05 | Phase 4 | Pending |
+| LIB-06 | Phase 4 | Pending |
 
 **Coverage:**
 - v1 requirements: 33 total
-- Mapped to phases: 0
-- Unmapped: 33 ⚠️
+- Mapped to phases: 33 ✓
+- Unmapped: 0
+
+**By phase:**
+
+| Phase | Name | Requirements |
+|-------|------|--------------|
+| 1 | Hear One Generator | 20 |
+| 2 | Knobs and the Fast Loop | 7 |
+| 3 | A Library Worth Listening To | 3 |
+| 4 | Layered Parts | 3 |
 
 ---
 *Requirements defined: 2026-09-15*
-*Last updated: 2026-09-15 after initial definition*
+*Last updated: 2026-09-15 after roadmap creation*
