@@ -43,9 +43,9 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Research spike**: Verify the OSC cue-server seam against the installed Sonic Pi v5.x — port 4560, unauthenticated cue, resident runner buffer that `sync`s and `eval`s the payload. The token-gated `/run-code` channel is out of scope and must not be attempted.
 
 Plans:
-- [ ] 01-01: Theory primitives, minimal IR, and the emitter — pattern to valid Sonic Pi source with seeding and sleep-safety
-- [ ] 01-02: Transports — file export, the shipped runner buffer, OSC push, pre-flight syntax/size validation, stable loop names, stop-all
-- [ ] 01-03: The first generator — musicality constraints applied, seed-diff determinism check, listening pass
+- [ ] 01-01-PLAN.md — Walking Skeleton tracer: `export --seed N` end to end (theory, IR, arpeggiator, emitter, syntax gate, atomic file write), then determinism, sleep-safety and symbolic-randomness proofs
+- [ ] 01-02-PLAN.md — In-key knobs: `--scale` / `--root` / `--out` and a rolled, printed seed, validated loudly at the CLI against Sonic Pi's full 157-name scale list, with the scale-lock proven structurally
+- [ ] 01-03-PLAN.md — Live slice: the shipped `runner.rb` buffer, OSC ping/push/ack, `play` with pre-flight syntax and size gates, a stable loop name, and `stop` via the per-step stop flag
 
 ### Phase 2: Knobs and the Fast Loop
 **Goal**: Twist a parameter, re-roll a seed, or edit a generator file and hear the difference within a couple of seconds, without editing emission code or restarting the Ruby session
